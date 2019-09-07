@@ -15,23 +15,23 @@
   <a href="book.html">Favorite BooKs</a>
   <a href="dog.html">My Dog</a>
 </div>
- <div class="main"> 
+ <div class="main">
 <div class="content">
     <center>
-        
 
-  
+
+
 <h2 id="margin">My Book Lists </h2>
-        
-  
-     
+
+
+
    <div class="container">
   <div class="row">
     <div class="col">
       <h4> Avaliable Books</h4>
       <!-- the following format is taken from Bootstrap website -->
-      
-      <table class="table">
+
+      <table ID="SortTask" class="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Book Title</th>
@@ -52,7 +52,7 @@
         <td>13.49 </td>
       </tr>
       <tr>
-  
+
         <td>The Great Gatsby</td>
         <td>F. Scott Fitzgerald</td>
         <td>2004</td>
@@ -61,7 +61,7 @@
         <td>9.92</td>
       </tr>
       <tr>
-      
+
         <td>Harry Potter</td>
         <td>J.K. Rolling</td>
         <td>2009</td>
@@ -69,9 +69,9 @@
         <td>4167</td>
         <td>57.49</td>
       </tr>
-      
+
       <tr>
-      
+
         <td>Case In Point</td>
         <td>Marc P. Cosentino</td>
         <td>2019</td>
@@ -79,19 +79,19 @@
         <td>255</td>
         <td>30</td>
       </tr>
-      
+
     </tbody>
     <tfoot class="thead-dark"
   </tfoot>
   </table>
-  
+
 
     </div>
-    
+
       <div class="col">
       <h4>Add New Books</h4>
-      
-    
+
+
       <form>
         <div class="row divm">
             <label for="Title"><b>Book Title: </b></label>
@@ -129,38 +129,41 @@
         <input type="text"  name="Price" id="Price">
   </div>
           </div>
-  
+
 <br>
   <button type="submit">Submit</button>
 </form>
-        
 
-    
+
+
     </div>
-  </div> 
+  </div>
         </div>
 
     </center>
-      
-   
+
+
 
       </div>
     </div>
-    
 
-                                                  
+
+
  <center>
     <div class="footer">
-        
+
     Copyright Reserved to Alicia walters
     </div>
     </center>
+    <script src="js/tablesort.min.js"></script>
+    <script>
+  new Tablesort(document.getElementById('SortTask'));
+</script>
+<!-- This sort table script is taken from tristen  -->
     </body>
-    
-    
-    
-   
+
+
+
+
 
 </html>
- 
-
