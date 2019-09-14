@@ -19,28 +19,30 @@
 <div class="content">
     <center>
 
-
-
 <h2 id="margin">Alicia Walters Home Page </h2>
+        
+        
+        
+    
+        
+        
+        
+       <div class="container">
+     <div class="row">
 
-
-
-   <div class="container">
-  <div class="row">
-    <div class="col">
-      <img src="image/ALICIA.png" height="400">
-    </div>
-
-      <div class="col">
       <h4>About Me</h4>
-
+        <div class="col" id="randomUsers" class="queueView">
+            <div class="users" v-for="user in users">
+   
     <ul class="list2">
-        <li><B>Name:</B> Alicia Walters </li>
-         <LI><b>Country:</b> United States</LI>
-         <li><b>Country of Origin:</b> China</li>
-         <li><b>Birthdate:</b> June 1</li>
-         <li><b>Age:</b> 22 </li>
-         <li><b>Email:</b> <a href=mailto:aliciaw0601@gmail.com? subject="HTML link">aliciaw0601@gmail.com</a></li>
+
+
+        <li><b>Last Name:</b>{{ users.lastname }}</li>
+        <li><b>First Name:</b> {{ users.firstName }}</li>
+         <li><b>Country of Origin:</b>{{ users.timezone.description }}</li>
+         <li><b>Birthdate:</b>{{ users.dob.date }}</li>
+         <li><b>Age:</b>  {{ users.dob.age }} </li>
+         <li><b>Email:</b> <a href="mailto:{{users.email }}" subject="HTML link">{{users.email}}</a></li>
           </ul>
     </div>
   </div>
@@ -50,17 +52,16 @@
 
 
 
-      </div>
-    </div>
-
-
-
- <center>
     <div class="footer">
 
     Copyright Reserved to Alicia walters
     </div>
-    </center>
+ 
+        
+
+<script src="JS/randomdata.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/waitingApp.js"></script>
     </body>
 
 
