@@ -1,13 +1,17 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       
+            <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
-  <link rel="stylesheet" href="css/style.css">
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>AliciaWalters-home</title>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>AliciaWalters-home</title>
 </head>
 <body>
 <div class="sidenav">
@@ -17,55 +21,47 @@
 </div>
  <div class="main">
 <div class="content">
-    <center>
-
-<h2 id="margin">Alicia Walters Home Page </h2>
-        
-        
-        
     
-        
-        
-        
-       <div class="container">
-     <div class="row">
-
-      <h4>About Me</h4>
-        <div class="col" id="randomUsers" class="queueView">
-            <div class="users" v-for="user in users">
-   
-    <ul class="list2">
 
 
-        <li><b>Last Name:</b>{{ users.lastname }}</li>
-        <li><b>First Name:</b> {{ users.firstName }}</li>
-         <li><b>Country of Origin:</b>{{ users.timezone.description }}</li>
-         <li><b>Birthdate:</b>{{ users.dob.date }}</li>
-         <li><b>Age:</b>  {{ users.dob.age }} </li>
-         <li><b>Email:</b> <a href="mailto:{{users.email }}" subject="HTML link">{{users.email}}</a></li>
+    <div class="container" id="randomuser">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1>
+          {{ user.results[0].name.first }} {{ user.results[0].name.last }} Home Page
+        </h1>
+        <br>
+           <a target="_blank" v-bind:href="user.results[0].picture.large">
+        <img v-bind:src="user.results[0].picture.large" alt="" width="200px">
+        </a>
+     
+      <br>
+          <br>
+      <center>
+          <div class="container">
+      <ul class="list2">
+          <li><b>Name: </b> {{ user.results[0].name.first }} {{ user.results[0].name.last }} </li>
+          <li><b>Birthday: </b>{{ user.results[0].dob.date }}</li>
+          <li><b>Age: </b>{{ user.results[0].dob.age }}</li>
+          <li><b>Country: </b>{{ user.results[0].location.city }}, {{ user.results[0].location.state }}</li>
+          <li><b>Email: </b><a v-bind:href="'mailto:'+user.results[0].email">{{ user.results[0].email }}</a></li>
           </ul>
+      
+      </div>
+          </center>
     </div>
   </div>
-        </div>
+    </div>
+     </div>
+    </div>
 
-    </center>
-
-
-
-    <div class="footer">
+     <div class="footer">
 
     Copyright Reserved to Alicia walters
     </div>
  
-        
-
-<script src="JS/randomdata.js"></script>
-         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/waitingApp.js"></script>
-    </body>
-
-
-
-
-
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src='js/randomuser.app.js'></script>
+</body>
 </html>
